@@ -30,7 +30,7 @@ class IntHeap {
 	 * @return The index of the left child
 	 */
 	private int leftChild(int childOf) {
-
+		return 2*childOf+1;
 	}
 
 	/**
@@ -39,7 +39,7 @@ class IntHeap {
 	 * @return The index of the right child
 	 */
 	private int rightChild(int childOf) {
-
+		return 2*childOf+2;
 	}
 
 	/**
