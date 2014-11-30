@@ -18,7 +18,7 @@ class IntHeap {
 	 * Insert
 	 * @param n Number to insert.
 	 */
-	public void insert (int n) {
+	public void insertion (int n) {
 		//Checks if heap gets too big
 		if ( elementCount >= data.length ) {
 			//Double the array size
@@ -41,14 +41,14 @@ class IntHeap {
 	}
 
 
-	public void remove (int n) {
-	
+	public void deletion (int n) {
+		
 	}
 
 	/**
 	 * Sort it using heap sort
 	 */
-	public int [] sort ()
+	public int [] sorting ()
 	{
 		
 	}
@@ -79,7 +79,7 @@ class IntHeap {
 	 * @param to to index
 	 * @return true if sucess, false if error
 	 */
-	private boolean swap ( int from, int to ) {
+	private boolean swaping ( int from, int to ) {
 		if ( from >= data.length || to >= data.length || from == to ) return false;
 		int temp = data[to];
 		data[to] = data[from];
