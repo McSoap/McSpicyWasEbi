@@ -3,20 +3,44 @@
  * @author Jia Xun
  */
 class IntHeap {
-	int [] data; //Stores data
+	int [] data = null; //Stores data
+	int elementCount = 0;
 
+	IntHeap (int defaultSize) {
+		data = new int[defaultSize];
+	}
+
+	IntHeap () {
+		data = new int[10];
+	}
 	/**
 	 * Insert
 	 * @param n Number to insert.
 	 */
-	 //cjx is an ebi
-	 //atomz520 : McSoap
 	public void insert (int n) {
+		//Checks if heap gets too big
+		if ( elementCount >= data.length ) {
+			//Double the array size
+			int [] temp = data;
+			data = new int[temp.length*2];
+			for ( int i = 0; i < temp.length; i++ ) {
+				data[i] = temp[i];
+			}
+		}
 
+		data[elementCount] = n;
+		elementCount++;
+
+		//Sort it to the right place
+		//TODO
 	}
+
+
 	public void remove (int n) {
 
 	}
+
+
 	public int [] sort () {
 
 	}
