@@ -65,7 +65,7 @@ class IntHeap {
                     data[parent ( i )] = temp;
                 }
             }
-        }while ( hasSwapped )
+        }while ( hasSwapped );
     }
 	//Helper functions
 
