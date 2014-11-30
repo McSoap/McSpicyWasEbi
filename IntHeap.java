@@ -27,16 +27,20 @@ class IntHeap {
     {
         boolean hasSwapped = false;
 
-        for ( int i = data.length - 1; i > 0; i-- )
+        do
         {
-            if ( data[i] > data[parent ( i )] )
+            hasSwapped = false;
+            for ( int i = data.length - 1; i > 0; i-- )
             {
-                hasSwapped = true;
-                int temp = data[i];
-                data[i] = data[parent ( i )];
-                data[parent ( i )] = temp;
+                if ( data[i] > data[parent ( i )] )
+                {
+                    hasSwapped = true;
+                    int temp = data[i];
+                    data[i] = data[parent ( i )];
+                    data[parent ( i )] = temp;
+                }
             }
-        }
+        }while ( hasSwapped )
     }
 	//Helper functions
 
