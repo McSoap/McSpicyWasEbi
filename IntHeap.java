@@ -13,11 +13,11 @@ class IntHeap {
 	IntHeap () {
 		data = new int[10];
 	}
+
 	/**
 	 * Insert
 	 * @param n Number to insert.
 	 */
-
 	public void insert (int n) {
 		//Checks if heap gets too big
 		if ( elementCount >= data.length ) {
@@ -30,10 +30,14 @@ class IntHeap {
 		}
 
 		data[elementCount] = n;
-		elementCount++;
-
+		
 		//Sort it to the right place
-		//TODO
+		int curPos = elementCount;
+		while( data[curPos] > data[parent(curPos)] && curPos > 0 ) {
+			swap ( curPos, parent(curPos) );
+		}
+
+		elementCount++;
 	}
 
 
@@ -65,6 +69,7 @@ class IntHeap {
             }
         }while ( hasSwapped );
     }
+
 	//Helper functions
 
 	/**
