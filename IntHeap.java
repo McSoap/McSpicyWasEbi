@@ -12,10 +12,10 @@ class IntHeap {
 	 //cjx is an ebi
 	 //atomz520 : McSoap
 	public void insert (int n) {
-
+		
 	}
 	public void remove (int n) {
-
+	
 	}
 	public int [] sort () {
 
