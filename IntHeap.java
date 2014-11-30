@@ -17,7 +17,7 @@ class IntHeap {
 	public void remove (int n) {
 
 	}
-	public int [] sort () {
+	public int [] sort () 
 
 	}
 
