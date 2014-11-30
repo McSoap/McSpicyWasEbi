@@ -11,17 +11,33 @@ class IntHeap {
 	 */
 	 //cjx is an ebi
 	 //atomz520 : McSoap
-	public void insert (int n) {
+	public void insert (int n)
+	{
 
 	}
 	public void remove (int n) {
 
 	}
-	public int [] sort () {
 
+	public int [] sort ()
+	{
 	}
 
+    public void heapify ()
+    {
+        boolean hasSwapped = false;
 
+        for ( int i = data.length - 1; i > 0; i-- )
+        {
+            if ( data[i] > data[parent ( i )] )
+            {
+                hasSwapped = true;
+                int temp = data[i];
+                data[i] = data[parent ( i )];
+                data[parent ( i )] = temp;
+            }
+        }
+    }
 	//Helper functions
 
 	/**
@@ -29,8 +45,9 @@ class IntHeap {
 	 * @param childOf The index of the parent
 	 * @return The index of the left child
 	 */
-	private int leftChild(int childOf) {
-
+	private int leftChild ( int childOf )
+	{
+        return ( 2*childOf ) + 1;
 	}
 
 	/**
@@ -38,8 +55,9 @@ class IntHeap {
 	 * @param childOf The index of the parent
 	 * @return The index of the right child
 	 */
-	private int rightChild(int childOf) {
-
+	private int rightChild ( int childOf )
+	{
+        return ( 2*childOf ) + 2;
 	}
 
 	/**
@@ -47,7 +65,13 @@ class IntHeap {
 	 * @param parentOf The index of the child
 	 * @return The index of the parent
 	 */
-	private int parent(int parentOf) {
+	private int parent ( int parentOf )
+	{
+        if ( parentOf == 0 )
+        {
+            return 0;
+        }
 
+        return ( parentOf - 1 ) / 2;
 	}
 }
