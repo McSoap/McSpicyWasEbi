@@ -60,9 +60,7 @@ class IntHeap {
                 if ( data[i] > data[parent ( i )] )
                 {
                     hasSwapped = true;
-                    int temp = data[i];
-                    data[i] = data[parent ( i )];
-                    data[parent ( i )] = temp;
+                    swap(i, parent(i));
                 }
             }
         }while ( hasSwapped );
