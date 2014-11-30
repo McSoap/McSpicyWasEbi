@@ -66,6 +66,20 @@ class IntHeap {
 	//Helper functions
 
 	/**
+	 * Swap the data
+	 * @param from from index
+	 * @param to to index
+	 * @return true if sucess, false if error
+	 */
+	private boolean swap ( int from, int to ) {
+		if ( from >= data.length || to >= data.length || from == to ) return false;
+		int temp = data[to];
+		data[to] = data[from];
+		data[from] = temp;
+		return true;
+	}
+	
+	/**
 	 * Gets the index of the left child of the given node
 	 * @param childOf The index of the parent
 	 * @return The index of the left child
