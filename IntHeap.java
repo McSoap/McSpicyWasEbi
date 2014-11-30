@@ -1,4 +1,3 @@
-
 /**
  * Heap class to do heaps!
  * @author Jia Xun
@@ -10,6 +9,7 @@ class IntHeap {
 	 * Insert
 	 * @param n Number to insert.
 	 */
+	 //cjx is an ebi
 	public void insert (int n) {
 
 	}
